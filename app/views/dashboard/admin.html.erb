@@ -1,0 +1,10 @@
+<h1>Dashboard#admin</h1>
+<p>Find me in app/views/dashboard/admin.html.erb</p>
+
+<% if current_user %>
+  <h1>Hi,  <%= current_user.email %>! Has Logged in! </h1>
+  <%= button_to "logout", destroy_user_session_path, method: :delete %>
+
+<% else %>
+
+<% end %>
