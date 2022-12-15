@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-#create custom failure for turbo
-class TurboFailureApp < Devise: :TurboFailureApp
+#! create custom failure for turbo
+class TurboFailureApp < Devise::FailureApp
   def respond
-    if request_format = = :turbo_stream
+    if request_format == :turbo_stream
       redirect
     else
       super 
@@ -33,7 +33,7 @@ Devise.setup do |config|
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
-  config.parent_controller = 'User: :DeviseController'
+  config.parent_controller = 'User::DeviseController'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
